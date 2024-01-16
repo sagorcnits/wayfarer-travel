@@ -359,8 +359,166 @@ nav ul li .home {
   color: var(--paragraph);
 }
 
+.discount-container {
+  max-width: var(--main-width);
+  margin: 0 auto;
+}
+
+.discount-row {
+  width: 100%;
+  background-image: url("Images/deals-banner1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 466px;
+  margin-top: 40px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.discount-card {
+  max-width: 570px;
+  border-radius: 16px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2.5px);
+  padding: 40px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.discount-card a {
+  text-decoration: none;
+  margin-right: 30px;
+  color: var(--paragraph);
+}
+
+.discount-card a > i {
+  color: var(--color-orange);
+}
+
+.discount-card > h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+.discount-card > p {
+  color: var(--paragraph);
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.discount-card > h3 {
+  color: var(--color-orange);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.discount-container > button,
+.discount-card button {
+  padding: 10px 25px;
+  border: none;
+  background-color: var(--color-orange);
+  border-radius: 8px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.discount-card button:hover {
+  background-color: black;
+}
+
+.discount-row2 {
+  background-image: url("Images/deals-banner2.png");
+  background-repeat: no-repeat;
+  background-position: 100%;
+  position: relative;
+}
+
+.discount-row2 > .discount-card {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.discount-container > button {
+  margin: 40px auto;
+
+  display: block;
+}
+
+.discount-container > button:hover {
+  background-color: black;
+}
+
+/* perfect-place-section start style */
+
+.perfect-place-section {
+  margin-top: 50px;
+}
+
+.perfect-container {
+  max-width: var(--main-width);
+  margin: auto;
+  display: flex;
+  flex: 1;
+}
+
+.perfect-title,
+.perfect-video {
+  width: 50%;
+  padding: 10px;
+}
+
+.perfect-title h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #131318;
+}
+
+.perfect-title p {
+  color: var(--paragraph);
+  line-height: 26px;
+  padding-top: 15px;
+}
+
+.perfect-title ul li {
+  margin-left: 30px;
+  color: #131318;
+  font-weight: bold;
+  padding: 15px 0;
+}
+
+.perfect-title button {
+  padding: 10px 30px;
+  background-color: var(--color-orange);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.perfect-title button:hover {
+  background-color: black;
+}
+
+.perfect-video video {
+  width: 100%;
+  border-radius: 16px;
+}
 /* mobile responsive start */
 @media screen and (max-width: 600px) {
+  .perfect-container,
+  .discount-row,
   .choose-row2,
   .choose-row1,
   .destination-container,
@@ -371,6 +529,7 @@ nav ul li .home {
     margin: auto;
   }
 
+  .perfect-container,
   .choose-row1,
   .row3,
   .row2,
@@ -378,6 +537,8 @@ nav ul li .home {
     flex-direction: column;
   }
 
+  .perfect-title,
+  .perfect-video,
   .price-tag,
   .pupoler-img,
   .pupoler-title {
@@ -454,11 +615,32 @@ nav ul li .home {
   .choose-row2 {
     margin-top: 20px;
   }
+
+  /* discount style start */
+  .discount-row {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    margin-top: 40px;
+  }
+
+  .discount-row2 > .discount-card,
+  .discount-card {
+    position: absolute;
+    max-height: 350px;
+    padding: 10px 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 30px;
+  }
 }
 
 /* midium responsive  */
 
 @media screen and (min-width: 600px) and (max-width: 990px) {
+  .perfect-container,
+  .discount-container,
   .choose-container,
   .destination-container,
   .pupoler-container,
@@ -467,11 +649,14 @@ nav ul li .home {
     width: 90%;
   }
 
+  .perfect-title,
+  .perfect-video,
   .pupoler-img,
   .pupoler-title {
     width: 100%;
   }
 
+  .perfect-container,
   .pupoler-container {
     flex-direction: column;
   }
